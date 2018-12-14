@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for getAxisOption function Should return correct result 1`] = `
+Object {
+  "axisLabel": Object {
+    "interval": 0,
+  },
+  "axisLine": Object {
+    "show": false,
+  },
+  "axisTick": Object {
+    "show": false,
+  },
+  "show": true,
+  "splitArea": Object {
+    "areaStyle": Object {
+      "color": "transparent",
+    },
+    "show": true,
+  },
+  "splitLine": Object {
+    "lineStyle": Object {
+      "color": "#FFF",
+      "width": 1,
+    },
+    "show": true,
+  },
+  "type": "category",
+}
+`;

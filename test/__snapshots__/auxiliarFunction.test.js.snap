@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for getMetricTooltip function Call with two arguments 1`] = `"<div class=\\"zd_tooltip_info_group customized\\"><div class=\\"zd_tooltip_info_table\\"><div class=\\"zd_tooltip_info_table_row\\"><div class=\\"zd_tooltip_info_table_row\\"><div class=\\"zd_tooltip_info_table_row_label\\">City</div><div class=\\"zd_tooltip_info_table_row_value\\">City</div></div></div><div class=\\"zd_tooltip_info_table_row\\"><div class=\\"zd_tooltip_info_table_row\\"><div class=\\"zd_tooltip_info_table_row_label\\">Country</div><div class=\\"zd_tooltip_info_table_row_value\\">Canada</div></div></div><div class=\\"zd_tooltip_info_table_row\\"><div class=\\"zd_tooltip_info_table_row_label\\">Volume</div><div class=\\"zd_tooltip_info_table_row_value\\"><div class=\\"color_icon active\\" style=\\"background-color: #FFFFFF;\\"></div>3</div></div></div></div>"`;
+
+exports[`Test for getMetricTooltip function Should response string html component 1`] = `"<div class=\\"zd_tooltip_info_group customized\\"><div class=\\"zd_tooltip_info_table\\"><div class=\\"zd_tooltip_info_table_row\\"><div class=\\"zd_tooltip_info_table_row\\"><div class=\\"zd_tooltip_info_table_row_label\\">City</div><div class=\\"zd_tooltip_info_table_row_value\\">City</div></div></div><div class=\\"zd_tooltip_info_table_row\\"><div class=\\"zd_tooltip_info_table_row\\"><div class=\\"zd_tooltip_info_table_row_label\\">Country</div><div class=\\"zd_tooltip_info_table_row_value\\">Canada</div></div></div><div class=\\"zd_tooltip_info_table_row\\"><div class=\\"zd_tooltip_info_table_row_label\\">Volume</div><div class=\\"zd_tooltip_info_table_row_value\\"><div class=\\"color_icon active\\" style=\\"background-color: #FFFFFF;\\"></div>3</div></div></div></div>"`;
+
+exports[`Test for getSerieData function Should return Array values 1`] = `
+Array [
+  Object {
+    "itemStyle": Object {
+      "color": "#0096b6",
+    },
+    "label": Object {
+      "color": "#FFF",
+    },
+    "value": Array [
+      0,
+      0,
+      19,
+      Object {
+        "current": Object {
+          "count": 19,
+          "metrics": null,
+          "na": false,
+        },
+        "group": Array [
+          "London",
+          "United Kingdom",
+        ],
+      },
+    ],
+  },
+  Object {
+    "itemStyle": Object {
+      "color": "#0096b6",
+    },
+    "label": Object {
+      "color": "#FFF",
+    },
+    "value": Array [
+      1,
+      1,
+      11,
+      Object {
+        "current": Object {
+          "count": 11,
+          "metrics": null,
+          "na": false,
+        },
+        "group": Array [
+          "Calgary",
+          "Canada",
+        ],
+      },
+    ],
+  },
+  Object {
+    "itemStyle": Object {
+      "color": "#0096b6",
+    },
+    "label": Object {
+      "color": "#FFF",
+    },
+    "value": Array [
+      2,
+      2,
+      9,
+      Object {
+        "current": Object {
+          "count": 9,
+          "metrics": null,
+          "na": false,
+        },
+        "group": Array [
+          "New York",
+          "United States",
+        ],
+      },
+    ],
+  },
+]
+`;
