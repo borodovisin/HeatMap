@@ -63,7 +63,7 @@ const getTableRow = (label, value) => `<div class="zd_tooltip_info_table_row"><d
  * @param {string} value 
  * @param {string} color 
  */
-const getLastMetric = (label, value, color) => `<div class="zd_tooltip_info_table_row"><div class="zd_tooltip_info_table_row_label">${label}</div><div class="zd_tooltip_info_table_row_value"><div class="color_icon active" style="background-color: ${color};"></div>${value}</div></div>`;
+const getLastMetric = (label, value, color) => `<div class="zd_tooltip_info_table_row"><div class="zd_tooltip_info_table_row_label">${label}</div><div class="zd_tooltip_info_table_row_value"><div class="color_icon active" style="background-color: ${color};"></div>${controller.getColorAccessor().formatted(value)}</div></div>`;
 
 /**
  * Get the metric definition for the tooltip
@@ -75,10 +75,10 @@ const getFinalMetric = params => {
         const datum = _.last(params.data.value);
         if (datum.current.metrics) {
             const label = getComplexMetricLabel(controller.query.getMetrics());
-            const lastMetric = getLastMetric(label, params.data.value[2], params.color);
+            const lastMetric = getLastMetric(label, params.data.value[3], params.color);
             return `<div class="zd_tooltip_info_table_row"><div class="zd_tooltip_info_table_row_label">Volumen</div><div class="zd_tooltip_info_table_row_value">${datum.current.count}</div></div>${lastMetric}`;
         }
-        return getLastMetric(getMetricLabel(controller.query.getMetrics()), params.data.value[2], params.color);
+        return getLastMetric(getMetricLabel(controller.query.getMetrics()), params.data.value[3], params.color);
     }
     return '';
 }

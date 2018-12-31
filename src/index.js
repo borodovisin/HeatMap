@@ -101,7 +101,7 @@ echarts.registerProcessor(ecModel => {
         const textBandWidthRatio = labelRectX.height / getxAxisBandWidth(heatMap.getWidth(), gridComponent.option.left, margin.right,  xAxisData.length);
         xAxisComponent.option.axisLabel.rotate = -90;
         gridComponent.option.top = margin.top + labelRectX.width + xAxisMargin;
-        xAxisComponent.option.axisLabel.interval = textBandWidthRatio <= 1 ? 0 : Math.floor(textBandWidthRatio);
+        xAxisComponent.option.axisLabel.interval = textBandWidthRatio <= 1 ? textBandWidthRatio < 0 ? xAxisData.length : 0 : Math.floor(textBandWidthRatio);
     
         if (xAxisComponent.option.axisLabel.interval > 0) {
           const skipStep = xAxisComponent.option.axisLabel.interval + 1;
@@ -111,8 +111,8 @@ echarts.registerProcessor(ecModel => {
 
     const yBandWidth = (heatMap.getHeight() - gridComponent.option.top - margin.bottom) / yAxisData.length;
     const textBandWidthRatioY = labelRectY.height / yBandWidth;
-    yAxisComponent.option.axisLabel.interval = textBandWidthRatioY <= 1 ? 0 : Math.floor(textBandWidthRatioY);
-  
+    yAxisComponent.option.axisLabel.interval = textBandWidthRatioY <= 1 ? textBandWidthRatioY < 0 ? yAxisData.length : 0 : Math.floor(textBandWidthRatioY);
+
     if (yAxisComponent.option.axisLabel.interval > 0) {
       const skipStep = yAxisComponent.option.axisLabel.interval + 1;
       gridComponent.option.left = margin.left + widestY(filterIntervalAxisCategory(yAxisData, skipStep)).width + yAxisMargin;
