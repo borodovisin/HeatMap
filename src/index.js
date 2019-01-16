@@ -30,7 +30,6 @@ import './index.css';
  */
 const chartContainer = document.createElement('div');
 chartContainer.classList.add('chart-container');
-chartContainer.id = 'idDivHeatMap';
 controller.element.appendChild(chartContainer);
 
 const margin = {
@@ -131,7 +130,7 @@ echarts.registerProcessor(ecModel => {
     }
 });
 
-const heatMap = echarts.init(document.querySelector('#idDivHeatMap'));
+const heatMap = echarts.init(chartContainer);
 
 /**
  * @see http://www.zoomdata.com/developers/docs/custom-chart-api/updating-queries-axis-labels/
